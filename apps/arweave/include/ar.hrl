@@ -12,14 +12,14 @@
 	-ifdef(DEBUG).
 		-define(NETWORK_NAME, "arweave.localtest").
 	-else.
-		-define(NETWORK_NAME, "arweave.N.1").
+		-define(NETWORK_NAME, "bigfile.V.1").
 	-endif.
 -endif.
 
 %% When a request is received without specifing the X-Network header, this network name
 %% is assumed.
 -ifndef(DEFAULT_NETWORK_NAME).
-	-define(DEFAULT_NETWORK_NAME, "arweave.N.1").
+	-define(DEFAULT_NETWORK_NAME, "bigfile.V.1").
 -endif.
 
 %% The current release number of the arweave client software.
