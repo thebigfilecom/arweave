@@ -142,7 +142,7 @@ init option unless you clean the data directory - you need to either restart wit
 `start_from_block_index` option or specify a peer from the same Arweave network via
 `peer <peer>`. Note that the state is only persisted every 50 blocks so if you
 restart the node without peers via `start_from_block_index` before reaching the height 50,
-it will go back to the genesis block.
+it will go back to the genesis block..
 
 As with mainnet peers, each peer must be run in its own physical or virtual environment (e.g. on its own machine or in its own container or virtual machine). If you try to run two nodes within the same environment you will get an error like `Protocol 'inet_tcp': the name arweave@127.0.0.1 seems to be in use by another Erlang node`
 
