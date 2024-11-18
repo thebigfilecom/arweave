@@ -12,8 +12,8 @@
 	sample_p3_config/0, sample_p3_config/1, sample_p3_config/3, sample_p3_config/4,
 	empty_p3_config/0]).
 
--define (DEPOSIT_ADDRESS, "BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU").
--define (DEPOSIT_ADDRESS_CHECKSUM, "ToOiTg").
+-define (DEPOSIT_ADDRESS, "SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ").
+-define (DEPOSIT_ADDRESS_CHECKSUM, "f291e711").
 
 %% @doc The XXX_parse_test() tests assert that a correctly formatted p3 configuration block is
 %% correctly parsed. They do *not* validate that the configuration data is semantically
@@ -49,7 +49,7 @@ basic_parse_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": 2
 				}
@@ -83,7 +83,7 @@ checksum_parse_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU:ToOiTg\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ:f291e711\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": 2
 				}
@@ -117,7 +117,7 @@ unsupported_payments_asset_parse_error_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"bitcoin/BTC\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": 2
 				}
@@ -133,7 +133,7 @@ bad_address_parse_error_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU:BAD_CHECKSUM\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ:BAD_CHECKSUM\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": 2
 				}
@@ -149,7 +149,7 @@ bad_minimum_balance_parse_error_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ\",
 					\"minimum_balance\": \"5.5\",
 					\"confirmations\": 2
 				}
@@ -165,7 +165,7 @@ bad_confirmations_parse_error_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": \"abc\"
 				}
@@ -181,7 +181,7 @@ bad_payments_token_error_test() ->
 		\"p3\": {
 			\"payments\": {
 				\"arweave/AR\": {
-					\"address\": \"BHAWuomQUIL18WON2LjqjDF4YuRDcmhme7wvFW2BDiU\",
+					\"address\": \"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ\",
 					\"minimum_balance\": \"-1000000\",
 					\"confirmations\": 2,
 					\"invalid\": \"field\"

@@ -6,7 +6,7 @@
   "start_from_block": "",
   "mine": true,
   "port": 1985,
-  "data_dir": "some_data_dir",
+  "data_dir": "data_dir",
   "log_dir": "log_dir",
   "storage_modules": [
     "0,unpacked",
