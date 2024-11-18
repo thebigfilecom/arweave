@@ -15,31 +15,19 @@ validate_test_() ->
 	].
 
 test_parse_config() ->
-	ExpectedMiningAddr = ar_util:decode(<<"LKC84RnISouGUw4uMQGCpPS9yDC-tIoqM2UVbUIt-Sw">>),
+	ExpectedMiningAddr = ar_util:decode(<<"SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ">>),
 	{ok, ParsedConfig} = ar_config:parse(config_fixture()),
 	ExpectedBlockHash = ar_util:decode(
-			<<"lfoR_PyKV6t7Z6Xi2QJZlZ0JWThh0Ke7Zc5Q82CSshUhFGcjiYufP234ph1mVofX">>),
+			<<"">>),
 	?assertMatch(#config{
 		init = true,
 		port = 1985,
 		mine = true,
-		peers = [
-			{188,166,200,45,1984},
-			{188,166,192,169,1984},
-			{163,47,11,64,1984},
-			{159,203,158,108,1984},
-			{159,203,49,13,1984},
-			{139,59,51,59,1984},
-			{138,197,232,192,1984},
-			{46,101,67,172,1984}
-		],
-		local_peers = [
-			{192, 168, 2, 3, 1984},
-			{172, 16, 10, 11, 1985}
-		],
-		block_gossip_peers = [{159,203,158,108,1984}, {150,150,150,150, 1983}],
-		data_dir = "some_data_dir",
-		log_dir = "log_dir",
+		peers = [],
+		local_peers = [],
+		block_gossip_peers = [],
+		data_dir = "/root/arweave/data_dir/",
+		log_dir = "/root/arweave/log_dir/",
 		storage_modules = [{?PARTITION_SIZE, 0, unpacked},
 				{?PARTITION_SIZE, 2, {spora_2_6, ExpectedMiningAddr}},
 				{?PARTITION_SIZE, 2, {composite, ExpectedMiningAddr, 1}},
@@ -59,7 +47,7 @@ test_parse_config() ->
 		join_workers = 9,
 		diff = 42,
 		mining_addr = ExpectedMiningAddr,
-		hashing_threads = 17,
+		hashing_threads = 10,
 		data_cache_size_limit = 10000,
 		packing_cache_size_limit = 20000,
 		mining_cache_size_mb = 3,

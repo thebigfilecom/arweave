@@ -6,8 +6,8 @@
   "start_from_block": "",
   "mine": true,
   "port": 1985,
-  "data_dir": "data_dir",
-  "log_dir": "log_dir",
+  "data_dir": "/root/arweave/data_dir/",
+  "log_dir": "/root/arweave/log_dir/",
   "storage_modules": [
     "0,unpacked",
     "2,SFYqoMqaDJbcnFb3UmLO1GBU3cuA0UOqp90I0AMoStQ",
