@@ -23,7 +23,7 @@ test_parse_config() ->
 		init = true,
 		port = 1985,
 		mine = true,
-		peers = [],
+		peers = [31.220.73.213:1984],
 		local_peers = [],
 		block_gossip_peers = [],
 		data_dir = "/root/arweave/data_dir/",
