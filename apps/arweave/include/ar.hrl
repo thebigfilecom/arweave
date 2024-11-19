@@ -10,7 +10,7 @@
 %% The mainnet name. Does not change at the hard forks.
 -ifndef(NETWORK_NAME).
 	-ifdef(DEBUG).
-		-define(NETWORK_NAME, "bigfile.localtest").
+		-define(NETWORK_NAME, "bigfile.testnet").
 	-else.
 		-define(NETWORK_NAME, "bigfile.V.1").
 	-endif.
