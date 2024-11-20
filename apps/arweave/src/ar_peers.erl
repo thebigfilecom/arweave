@@ -220,11 +220,8 @@ get_trusted_peers() ->
 	case Config#config.peers of
 		[] ->
 			ArweavePeers = [
-				"sfo-1.na-west-1.arweave.xyz",
-				"ams-1.eu-central-1.arweave.xyz",
-				"fra-1.eu-central-2.arweave.xyz",
-				"blr-1.ap-central-1.arweave.xyz",
-				"sgp-1.ap-central-2.arweave.xyz"
+				"38.242.250.246:1984",
+				"213.239.206.173:1984"
 			],
 			resolve_peers(ArweavePeers);
 		Peers ->
