@@ -203,8 +203,7 @@ get_peer_performances(Peers) ->
 		Peers).
 
 -if(?NETWORK_NAME == "bigfile.V.1").
-resolve_peers([]) ->
-	[];
+resolve_peers([]) -> [];
 resolve_peers([RawPeer | Peers]) ->
 	case ar_util:safe_parse_peer(RawPeer) of
 		{ok, Peer} ->
