@@ -216,21 +216,21 @@ resolve_peers([RawPeer | Peers]) ->
 	end.
 
 get_trusted_peers() ->
-    {ok, Config} = application:get_env(arweave, config),
-    case Config#config.peers of
-        [] ->
-            %% Eğer trusted peers listesi boşsa, node kendisini trusted olarak eklesin
-            ArweavePeers = ["127.0.0.1:1984"],
-            resolve_peers(ArweavePeers);
-        Peers ->
-            resolve_peers(Peers)
-    end.
+	{ok, Config} = application:get_env(arweave, config),
+	case Config#config.peers of
+		[] ->
+			ArweavePeers = [
+				"127.0.0.1:1984"
+			],
+			resolve_peers(ArweavePeers);
+		Peers ->
+			Peers
+	end.
 -else.
 get_trusted_peers() ->
 	{ok, Config} = application:get_env(arweave, config),
 	Config#config.peers.
 -endif.
-
 %% @doc Return true if the given peer has a public IPv4 address.
 %% https://en.wikipedia.org/wiki/Reserved_IP_addresses.
 is_public_peer({Oct1, Oct2, Oct3, Oct4, _Port}) ->
